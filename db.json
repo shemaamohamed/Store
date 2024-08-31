@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Body Splash-Cozy Dream",
+      "size": "240ml",
+      "price": "240EGP",
+      "brand": "eva cosmetics",
+      "type": "Body mist"
+    },
+    {
+      "id": "2",
+      "title": "Body Splash-Gold Spell",
+      "size": "240ml",
+      "price": "240EGP",
+      "brand": "eva cosmetics",
+      "type": "Body mist"
+    },
+    {
+      "id": "3",
+      "title": "Body Splash-Love Tale",
+      "size": "240ml",
+      "price": "240EGP",
+      "brand": "eva cosmetics",
+      "type": "Body mist"
+    },
+    {
+      "id": "4",
+      "title": "Body Splash-In the Clouds",
+      "size": "240ml",
+      "price": "240EGP",
+      "brand": "eva cosmetics",
+      "type": "Body mist"
+    },
+    {
+      "id": "5",
+      "title": "Summer Twist Fragrance Mist",
+      "size": "240ml",
+      "price": "200EGP",
+      "brand": "eva cosmetics",
+      "type": "Body mist"
+    },
+    {
+      "id": "6",
+      "title": "Collagen Night Eye Cream",
+      "size": "15ml",
+      "price": "150EGP",
+      "brand": "eva cosmetics",
+      "type": "Skin care"
+    },
+    {
+      "name": "Shimaa Mohamed",
+      "email": "ali@gmail.com",
+      "password": "123456789",
+      "id": "N4CKDon"
+    },
+    {
+      "name": "Shimaa Mohamed",
+      "email": "ali@gmail.com",
+      "password": "123456789",
+      "id": "iJ79WsA"
+    }
+  ]
+}

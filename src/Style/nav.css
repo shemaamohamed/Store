@@ -1,0 +1,42 @@
+.list{
+    list-style: none;
+    display: flex;
+    height: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    margin: auto;
+    border: solid whitesmoke 10px;
+    
+
+}
+.list li a{
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    color: black; 
+    text-transform:uppercase;
+}
+.list li {
+    padding: 10px 30px;
+}
+.list li a:hover{
+    color: burlywood;
+}
+.list li .active{
+    color: burlywood;
+
+}
+
+.list .category{
+    display: flex;
+    margin: auto;
+
+}
+.list .logo{
+    display: flex;
+    margin: auto;
+}

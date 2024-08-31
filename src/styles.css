@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+}
+
+.counter,
+.theme-switcher,
+.shopping-cart {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter:hover,
+.theme-switcher:hover,
+.shopping-cart:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.count {
+  font-size: 64px;
+  color: #3498db;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.light {
+  background-color: #ecf0f1;
+  color: #34495e;
+}
+
+.dark {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.toggle-button {
+  background-color: #e74c3c;
+}
+
+.toggle-button:hover {
+  background-color: #c0392b;
+}
+
+.dark .toggle-button {
+  background-color: #f39c12;
+  color: #34495e;
+}
+
+.dark .toggle-button:hover {
+  background-color: #d35400;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.product {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item:hover {
+  background-color: #e0e0e0;
+}
+
+.cart-item input {
+  width: 60px;
+  margin: 0 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter,
+.theme-switcher,
+.shopping-cart,
+.product,
+.cart-item {
+  animation: fadeIn 250ms ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.count {
+  animation: pulse 2s infinite;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.product {
+  animation: slideIn 250ms ease-out;
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+  animation: rotateIn 250ms ease-out;
+}
+
+input {
+  font-size: 2rem;
+  font-weight: bolder;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+.counter .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.counter button {
+  flex: 1;
+  max-width: 120px;
+}
+
+.counter button:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+.counter button:nth-child(2):hover {
+  background-color: #c0392b;
+}

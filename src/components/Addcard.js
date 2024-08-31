@@ -1,26 +1,44 @@
 import { useState } from 'react';
 import '../Style/card.css'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 function AddCard(){
-    const[id,setId]=useState('');
-    const[title,setTitle]=useState('');
-    const[size,setSize]=useState('');
-    const[price,setPrice]=useState('');
-    const[brand,setBrand]=useState('');
-    const[type,setType]=useState('');
+    const [formData, setFormData] = useState({
+        id: '',
+        title: '',
+        size: '',
+        price: '',
+        brand: '',
+        type: '',
+        image: null
+      });
+      const handleChange=(e)=>{
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+
+      }
+      const navigate =useNavigate()
+    
     const handleSubmit=(e)=>{
         e.preventDefault();
-        const product = { id, title, size, price, brand, type };
+        fetch('http://localhost:3001/products', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: { 'Content-Type': 'application/json' },
+          }).then((data) => {
+              alert('Success Add');
+              navigate('/content')
+
+            })
+            .catch((error) => {
+                alert('Failed to Add');
+            });
+
+        
          
-        setId('')
-        setTitle('')
-        setSize('')
-        setPrice('')
-        setBrand('')
-        setType('')
+        
     }
 
     return(
@@ -31,8 +49,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="id"
-                    value={id}
-                    onChange={(e) => setId(e.target.value)}
+                    value={formData.id}
+                    onChange={handleChange}
                     required
                 />
             </div>
@@ -41,8 +59,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    value={formData.title}
+                    onChange={handleChange}
                     required
                 />
             </div>
@@ -51,8 +69,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="size"
-                    value={size}
-                    onChange={(e) => setSize(e.target.value)}
+                    value={formData.size}
+                    onChange={handleChange}
                     required
                 />
             </div>
@@ -61,8 +79,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="price"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
+                    value={formData.price}
+                    onChange={handleChange}
                     required
                 />
             </div>
@@ -71,8 +89,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="Brand"
-                    value={brand}
-                    onChange={(e) => setBrand(e.target.value)}
+                    value={formData.brand}
+                    onChange={handleChange}
                     required
                 />
             </div>
@@ -81,8 +99,8 @@ function AddCard(){
                 <input
                     type="text"
                     id="Type"
-                    value={type}
-                    onChange={(e) => setType(e.target.value)}
+                    value={formData.type}
+                    onChange={handleChange}
                     required
                 />
             </div>

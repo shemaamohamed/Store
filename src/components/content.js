@@ -17,19 +17,39 @@ function Content() {
       product.title &&
       product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   useEffect(() => {
-    // setLoading(true);
-    fetch("http://localhost:3001/products")
+    setLoading(true);
+    // want this to run every time the component is rendered or re-rendered or change happen in local storage
+    const triggerChange = setInterval(() => {
+      fetch("http://localhost:3001/products")
       .then((res) => res.json())
       .then((products) => {
-        setTimeout(() => {
           setProducts(products);
           setLoading(false);
-        }, 2000);
+       
       })
       .catch(() => setLoading(false));
+      
+    }, 1000);
+    // cleanup function clear the interval
+    return () => {
+      // clear the interval for performance and memory and avoid memory leak
+      clearInterval(triggerChange);
+    };
   }, []);
+
+  // useEffect(() => {
+  //   // setLoading(true);
+  //   fetch("http://localhost:3001/products")
+  //     .then((res) => res.json())
+  //     .then((products) => {
+  //       setTimeout(() => {
+  //         setProducts(products);
+  //         setLoading(false);
+  //       }, 1000);
+  //     })
+  //     .catch(() => setLoading(false));
+  // }, []);
 
   return (
     <>
@@ -43,8 +63,7 @@ function Content() {
           onChange={handleSearchChange}
         ></input>
       </div>
-      <div className="p-card">
-        {loading && (
+      {loading && (
           <div class="dot-spinner">
             <div class="dot-spinner__dot"></div>
             <div class="dot-spinner__dot"></div>
@@ -56,6 +75,8 @@ function Content() {
             <div class="dot-spinner__dot"></div>
           </div>
         )}
+      <div className="p-card">
+        
         {!loading && filtercard.length === 0 && <p>No products found.</p>}
         {filtercard.map((cart, index) => (
           <Cards cart={cart} key={index} />

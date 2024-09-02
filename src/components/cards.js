@@ -1,6 +1,6 @@
 import '../Style/card.css'
 import Card from './card';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 //extract
 function Cards(props) {
@@ -13,11 +13,20 @@ function Cards(props) {
         //             cardElements[i].innerHTML = ''; // Clear the content of each card element
         //         }
         //     };
+            // setLoading(true);
+
+         
+              
+         
         
 
        const yourcard=(cart)=>{
            console.log(cart);
-           setShowCard(true);
+           fetch(`http://localhost:3001/products/${cart.id}`,{
+            method:"Delete",
+        })
+        console.log("cart")
+        //    setShowCard(true);
         //    clearAllCards();
         }
         const {cart}=props
@@ -27,9 +36,9 @@ function Cards(props) {
                 <img src={require(`../assets/${cart.id}.jpg`)} alt="Red t-shirt with a logo" />
                 <h6>{cart.title}<small>({cart.size})</small></h6>
                 <h6 className="price">{cart.price}</h6>
-                <button onClick={()=>yourcard(cart)}>Add to cart</button>
+                <button onClick={()=>yourcard(cart)}>Delete cart</button>
             </div>
-                {showCard && <Card cart={cart} />}
+                {/* {showCard && <Card cart={cart} />} */}
             </>
                
 

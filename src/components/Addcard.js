@@ -48,16 +48,18 @@ function AddCard() {
           <input
             type="text"
             id="id"
+            name="id"
             value={formData.id}
             onChange={handleChange}
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="author">Author</label>
+          <label htmlFor="title">title</label>
           <input
             type="text"
             id="title"
+            name="title"
             value={formData.title}
             onChange={handleChange}
             required
@@ -68,6 +70,7 @@ function AddCard() {
           <input
             type="text"
             id="size"
+            name="size"
             value={formData.size}
             onChange={handleChange}
             required
@@ -78,6 +81,7 @@ function AddCard() {
           <input
             type="text"
             id="price"
+            name="price"
             value={formData.price}
             onChange={handleChange}
             required
@@ -88,6 +92,7 @@ function AddCard() {
           <input
             type="text"
             id="Brand"
+            name=""
             value={formData.brand}
             onChange={handleChange}
             required

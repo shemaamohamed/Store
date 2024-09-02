@@ -1,9 +1,5 @@
 .card{
-    display: flex;
-    width: 15%;
-    flex-direction:column;
-    text-align: center;
-    margin: 20px 30px;
+   
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -15,6 +11,7 @@
 h6{
     padding-top:8px ;
     text-align: center;
+    height: 30%;
 }
 
 .price{
@@ -29,15 +26,20 @@ button{
     border:none;
     width: 100%;
     padding: 10px 20px;
+    height: 40%;
 }
  button:hover{
     background-color: burlywood;
 }
 .p-card{
-    margin: auto;
-    width: 90%;
-    display: flex ;
-    flex-wrap: wrap;
+  margin:  10px auto;
+  width: 90%;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto auto auto;
+}
+.card img{
+  height: 200px;
 }
 .yourcard{
     display: flex;
@@ -53,6 +55,7 @@ button{
     color: black;
     
 }
+
 .image img{
     width:400px;
     height: 400px;

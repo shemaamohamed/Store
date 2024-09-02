@@ -12,6 +12,7 @@ import Content from "./components/content";
 import AddCard from "./components/Addcard";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
+import Card from "./components/card";
 
 function App() {
   return (
@@ -23,10 +24,12 @@ function App() {
 
 function AppContent() {
   const [isLogin, setIsLogin] = useState(false);
+  const [isUser, setIsUser] = useState(false);
+  const [products, setProducts] = useState();
+
 
   const location = useLocation();
   const navigate = useNavigate();
-
   // Get the current path
   const currentPath = location.pathname;
 
@@ -35,7 +38,14 @@ function AppContent() {
     const triggerChange = setInterval(() => {
       const isLoginTrigger = localStorage.getItem("isLogin") ? true : false;
       setIsLogin(isLoginTrigger);
-    }, 1000);
+      const isUserTrigger = localStorage.getItem("isUser") ? true : false;
+      setIsUser(isUserTrigger);
+      let productTrigger = localStorage.getItem("product");
+      productTrigger=JSON.parse( productTrigger)
+      console.log(productTrigger);
+      setProducts(productTrigger);
+      
+    }, 2000);
     // cleanup function clear the interval
     return () => {
       // clear the interval for performance and memory and avoid memory leak
@@ -59,6 +69,11 @@ function AppContent() {
         navigate("/content");
       }
     }
+    if (currentPath === "/add") {
+      if (isUser) {
+        navigate("/content");
+      }
+    }
   }, [currentPath, isLogin, navigate]);
 
   const PrivateRoute = ({ children }) => {
@@ -74,7 +89,7 @@ function AppContent() {
 
   return (
     <>
-      <Nav isLogin={isLogin} />
+      <Nav isLogin={isLogin}  isUser={isUser}/>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
@@ -82,10 +97,15 @@ function AppContent() {
           path="/content"
           element={
             <PrivateRoute>
-              <Content />
+              <Content isUser={isUser} />
             </PrivateRoute>
           }
         />
+        <Route path="/buy"  element={
+            <PrivateRoute>
+              <Card products={products}/>
+            </PrivateRoute>
+          }/>
         <Route
           path="/add"
           element={

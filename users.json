@@ -1,105 +1,34 @@
 {
   "user": [
-    {
-      "name": "Shimaa Mohamed",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "0SEAqkP"
-    },
+  
     {
       "name": "Shimaa",
       "email": "alijjjj@gmail.com",
       "password": "123456789",
+      "type":"user",
       "id": "StltAJ1"
     },
     {
       "name": "Shimaa jmjjl",
       "email": "alijjjj@gmail.com",
       "password": "123456789",
+      "type":"user",
       "id": "t0mRTBX"
     },
     {
       "name": "rrr1",
       "email": "ali@gmail.com",
-      "password": "2",
+      "password": "123456789",
+      "type":"admin",
       "id": "iKaLo-R"
     },
-    {
-      "name": "rrrr445",
-      "email": "ali@gmail.com",
-      "password": "3",
-      "id": "qpDtXkf"
-    },
-    {
-      "name": "uuu",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "chLXVDu"
-    },
-    {
-      "name": "rrrr",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "lzOTXpy"
-    },
-    {
-      "name": "rrrr",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "aSgTjnW"
-    },
-    {
-      "name": "rrrr",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "89-nPr6"
-    },
-    {
-      "name": "rrr",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "j9vK_Sy"
-    },
-    {
-      "name": "fggg",
-      "email": "ali@gmail.com",
-      "password": "33fggggggg",
-      "id": "vcfEsNe"
-    },
-    {
-      "name": "uuu",
-      "email": "ali@gmail.com",
-      "password": "12345678988",
-      "id": "MZKgV9c"
-    },
-    {
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "qQaitf0"
-    },
-    {
-      "name": "ttt",
-      "email": "shimaa@gmail.com",
-      "password": "666666666666666",
-      "id": "nGLmTod"
-    },
-    {
-      "name": "uuu",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "GVTd1e4"
-    },
+   
     {
       "name": "ShimaaMohamed",
       "email": "alim46972@gmail.com",
       "password": "12345567890",
+      "type":"user",
       "id": "UrFsl3a"
-    },
-    {
-      "name": "ShimaaMohamed",
-      "email": "ali@gmail.com",
-      "password": "123456789",
-      "id": "qcGrPV6"
     }
   ]
 }

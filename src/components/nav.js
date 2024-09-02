@@ -2,9 +2,10 @@ import "../Style/nav.css";
 import { Link } from "react-router-dom";
 
 function Nav(props) {
-  const { isLogin } = props;
+  const { isLogin ,isUser } = props;
   const handlelogout = () => {
     localStorage.removeItem("isLogin");
+    localStorage.removeItem("isUser");
   };
 
   return (
@@ -15,9 +16,12 @@ function Nav(props) {
             <li>
               <Link to="/content">All Products</Link>
             </li>
-            <li>
-            <Link to="/add">Add Products</Link>
-            </li>
+            {!isUser&&(
+              <li>
+              <Link to="/add">Add Products</Link>
+              </li>
+            )}
+            
             
           </>
         )}

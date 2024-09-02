@@ -3,7 +3,8 @@ import "../Style/card.css";
 import Cards from "./cards";
 import { Helmet } from "react-helmet";
 
-function Content() {
+function Content(props) {
+  const {isUser}=props;
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
@@ -79,7 +80,7 @@ function Content() {
         
         {!loading && filtercard.length === 0 && <p>No products found.</p>}
         {filtercard.map((cart, index) => (
-          <Cards cart={cart} key={index} />
+          <Cards isUser={isUser} cart={cart} key={index} />
         ))}
       </div>
     </>

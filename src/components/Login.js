@@ -51,11 +51,25 @@ const Login = () => {
         setError("Login failed. Please try again.");
       });
   };
+  let userExists =false;
+  const typeuser = 'user';
+
 
   const checkUser = (users) => {
-    const userExists = users.some(
-      (user) =>
-        user.email === formData.email && user.password === formData.password
+    users.some(
+      (user) => {
+        if(user.email === formData.email && user.password === formData.password){
+          if(user.type===typeuser){
+            localStorage.setItem("isUser", true);
+          }
+          userExists =true
+          return true;
+
+        }
+        return false;
+      }
+      
+        
     );
 
     if (userExists) {

@@ -13,6 +13,7 @@ import AddCard from "./components/Addcard";
 import SignUp from "./components/Signup";
 import Login from "./components/Login";
 import Card from "./components/card";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -117,6 +118,7 @@ function AppContent() {
           }
         />
       </Routes>
+      <Footer/>
     </>
   );
 }

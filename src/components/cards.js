@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import '../Style/card.css'
-import Card from './card';
-import React, { useEffect} from 'react';
+import React from 'react';
 
 //extract
 function Cards(props) {

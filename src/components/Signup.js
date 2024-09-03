@@ -35,7 +35,7 @@ const SignUp = () => {
   };
   const userexist=(form)=>{
     let flag=true;
-    userData.map((user)=>{
+    userData.map((user) => {
       if(user.email===form.email){
         flag=false;
       }

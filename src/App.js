@@ -32,14 +32,7 @@ function AppContent() {
   const navigate = useNavigate();
   // Get the current path
   const currentPath = location.pathname;
-  const parseJSON = (value) => {
-    try {
-      return JSON.parse(value);
-    } catch (error) {
-      console.error("Error parsing JSON from localStorage", error);
-      return null;
-    }
-  };
+
 
   useEffect(() => {
     // want this to run every time the component is rendered or re-rendered or change happen in local storage

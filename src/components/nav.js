@@ -21,8 +21,6 @@ function Nav(props) {
               <Link to="/add">Add Products</Link>
               </li>
             )}
-            
-            
           </>
         )}
         
@@ -41,7 +39,6 @@ function Nav(props) {
             <li className="category">
               <Link onClick={handlelogout} to="/login">Logout</Link>
             </li>
-            
           </>
         )}
       </li>

@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
-function Card(props){
-    const {cart}=props
+function Card(){
+    const cart =JSON.parse(localStorage.getItem('product'));
+
     // const {id,title,size,brand,type,price}=cart
     return(
         <div className="yourcard">

@@ -32,17 +32,26 @@ function AppContent() {
   const navigate = useNavigate();
   // Get the current path
   const currentPath = location.pathname;
+  const parseJSON = (value) => {
+    try {
+      return JSON.parse(value);
+    } catch (error) {
+      console.error("Error parsing JSON from localStorage", error);
+      return null;
+    }
+  };
 
   useEffect(() => {
     // want this to run every time the component is rendered or re-rendered or change happen in local storage
     const triggerChange = setInterval(() => {
       const isLoginTrigger = localStorage.getItem("isLogin") ? true : false;
       setIsLogin(isLoginTrigger);
+
       const isUserTrigger = localStorage.getItem("isUser") ? true : false;
       setIsUser(isUserTrigger);
+      
       let productTrigger = localStorage.getItem("product");
-      productTrigger=JSON.parse( productTrigger)
-      console.log(productTrigger);
+      // productTrigger=JSON.parse( productTrigger)
       setProducts(productTrigger);
       
     }, 2000);

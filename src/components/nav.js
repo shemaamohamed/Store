@@ -9,7 +9,11 @@ function Nav(props) {
   };
 
   return (
-    <ul className="list">
+    <div>
+      
+     <ul className="list">
+      
+      
       <li className="category">
       {isLogin && (
           <>
@@ -43,6 +47,8 @@ function Nav(props) {
         )}
       </li>
     </ul>
+    </div>
+   
   );
 }
 

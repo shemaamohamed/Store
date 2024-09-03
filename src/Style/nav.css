@@ -2,7 +2,7 @@
     list-style: none;
     display: flex;
     height: 80px;
-    background-color: #ffffff;
+    background-color: #C9DABF;
     text-align: center;
     margin: auto;
     border: solid whitesmoke 10px;
@@ -17,7 +17,7 @@
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
-    color: black; 
+    color: white; 
     text-transform:uppercase;
 }
 .list li {

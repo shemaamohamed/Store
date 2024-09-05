@@ -43,7 +43,7 @@ button{
 }
 .cards img:hover{
 
-  outline: 2px solid rgb(255, 255, 255); /* Example outline when the image is focused */
+  outline: 2px solid rgb(255, 255, 255); 
   transform: scale(1.3); 
  
 }
@@ -119,7 +119,7 @@ h4{
 
 
 }
-/* From Uiverse.io by abrahamcalsin */ 
+
 .dot-spinner {
     --uib-size: 2.8rem;
     --uib-speed: .9s;

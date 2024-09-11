@@ -2,12 +2,18 @@
     list-style: none;
     display: flex;
     height: 80px;
-    background-color: #C9DABF;
+  
     text-align: center;
     margin: auto;
-    border: solid whitesmoke 10px;
     
 
+}
+.nav{
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    width: 100%;
+    background-color: #C9DABF; 
 }
 .list li a{
     text-decoration: none;

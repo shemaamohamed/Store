@@ -9,7 +9,7 @@ function Nav(props) {
   };
 
   return (
-    <div>
+    <div className="nav">
       
      <ul className="list">
       

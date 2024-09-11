@@ -88,7 +88,8 @@
   }
   footer{
     position: relative;
-    
+    height: 470px;
+
 
 
 
@@ -101,6 +102,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
+    bottom:0
   }
   .text{
     margin:auto;
